@@ -10,7 +10,7 @@
 
 #include "Image.h"
 
-class PNGImage : public Image {
+class PNGImage: public Image {
 public:
 	~PNGImage();
 	static PNGImage* load(const char* filename);
@@ -25,6 +25,5 @@ protected:
 	void calculateDimensions();
 
 };
-
 
 #endif /* PNGIMAGE_H_ */

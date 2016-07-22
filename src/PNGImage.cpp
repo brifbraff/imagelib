@@ -30,8 +30,8 @@ PNGImage* PNGImage::load(const char* filename) {
 	PNGImage* png_image = new PNGImage();
 	png_image->name = filename;
 	png_image->calculateDimensions();
-	png_image->image_array = read_png(png_image->name, &(png_image->IMAGE_WIDTH),
-			&(png_image->IMAGE_HEIGHT));
+	png_image->image_array = read_png(png_image->name,
+			&(png_image->IMAGE_WIDTH), &(png_image->IMAGE_HEIGHT));
 	return png_image;
 }
 

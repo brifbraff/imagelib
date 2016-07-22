@@ -10,7 +10,7 @@
 
 #include "Image.h"
 
-class JPGImage : public Image {
+class JPGImage: public Image {
 
 public:
 	~JPGImage();
@@ -27,8 +27,6 @@ private:
 protected:
 	void calculateDimensions();
 
-
 };
-
 
 #endif /* JPGIMAGE_H_ */

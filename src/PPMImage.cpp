@@ -57,6 +57,13 @@ PPMImage* PPMImage::load(const char* filename) {
 	return ppm_image;
 }
 
+PPMImage* PPMImage::convert(Image* image) {
+	PPMImage* ppm_image = new PPMImage();
+	ppm_image->convertImageFromTo(image, ppm_image);
+	ppm_image->ppm_array = (uchar*) malloc(ppm_image->IMAGE_WIDTH*ppm_image->IMAGE_HEIGHT*3*sizeof(uchar));
+	return ppm_image;
+}
+
 void PPMImage::convertTo2d() {
 	image_array = (UCOLOR**) malloc(sizeof(UCOLOR*) * (IMAGE_HEIGHT));
 	for (int i = 0; i < IMAGE_HEIGHT; i++) {
@@ -87,12 +94,6 @@ void PPMImage::convertTo1d() {
 
 void PPMImage::setMode(Mode m) {
 	this->mode = m;
-}
-
-PPMImage* PPMImage::convert(Image* image) {
-	PPMImage* ppm_image = new PPMImage();
-	ppm_image->convertImageFromTo(image, ppm_image);
-	return ppm_image;
 }
 
 void PPMImage::save(const char* filename) {

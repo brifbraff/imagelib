@@ -30,7 +30,8 @@ JPGImage* JPGImage::load(const char* filename) {
 	JPGImage* jpg_image = new JPGImage();
 	jpg_image->name = filename;
 	jpg_image->calculateDimensions();
-	jpg_image->image_array = read_jpeg(jpg_image->name, &(jpg_image->IMAGE_WIDTH), &(jpg_image->IMAGE_HEIGHT));
+	jpg_image->image_array = read_jpeg(jpg_image->name,
+			&(jpg_image->IMAGE_WIDTH), &(jpg_image->IMAGE_HEIGHT));
 	return jpg_image;
 }
 
@@ -42,7 +43,8 @@ JPGImage* JPGImage::convert(Image* image) {
 
 void JPGImage::save(const char* filename) {
 	if (image_array != NULL) {
-		write_jpeg(filename, image_array, IMAGE_WIDTH, IMAGE_HEIGHT, image_quality);
+		write_jpeg(filename, image_array, IMAGE_WIDTH, IMAGE_HEIGHT,
+				image_quality);
 	}
 }
 

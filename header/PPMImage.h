@@ -34,7 +34,6 @@ private:
 	void convertTo2d();
 	void convertTo1d();
 
-
 protected:
 	void calculateDimensions();
 

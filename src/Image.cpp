@@ -65,7 +65,8 @@ void Image::paintRect(Pixel* start_from, int right, int down,
 	int x = start_from->x;
 	int y = start_from->y;
 
-	if (down <= 0 || right <= 0 || y < 0 || y > IMAGE_HEIGHT || x < 0 || x > IMAGE_WIDTH) {
+	if (down <= 0 || right <= 0 || y < 0 || y > IMAGE_HEIGHT || x < 0
+			|| x > IMAGE_WIDTH) {
 		throw std::invalid_argument("Impossible to work on these inputs.");
 	}
 

@@ -12,15 +12,15 @@ typedef unsigned char uchar;
 typedef uchar UCOLOR[3];
 
 struct Pixel {
-	Pixel(int x, int y) : x(x), y(y){}
-	~Pixel(){};
+	Pixel(int x, int y) : x(x), y(y) {}
+	~Pixel() {};
 	int x;
 	int y;
 };
 
 struct Color {
 	Color(uchar r, uchar g, uchar b) : red(r), green(g), blue(b) {}
-	~Color(){};
+	~Color() {};
 	uchar red;
 	uchar green;
 	uchar blue;
