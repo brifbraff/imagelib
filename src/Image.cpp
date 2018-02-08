@@ -43,6 +43,7 @@ void Image::convertImageFromTo(Image* from, Image* to) {
 	to->IMAGE_WIDTH = from->getWidth();
 	to->IMAGE_HEIGHT = from->getHeight();
 
+	// these mallocs should be freed somewhere
 	to->image_array = (UCOLOR**) malloc(sizeof(UCOLOR*) * (to->IMAGE_HEIGHT));
 	for (int i = 0; i < to->IMAGE_HEIGHT; i++) {
 		to->image_array[i] = (UCOLOR*) malloc(
